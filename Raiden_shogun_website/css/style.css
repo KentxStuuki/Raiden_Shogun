@@ -1,0 +1,852 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* header, navbar and buttons design*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: purple;/*can change color later*/
+    /*border-radius: 0 0 0 0; Can change later if we want */
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+}
+
+.navlink{
+    display: flex;
+    text-align: center;
+}
+
+.navlink ul, li{
+    display: inline-block;
+    margin: 0 35px;
+}
+
+.navlink ul, li, a{
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000000; /*can change color later*/
+    transition: 3s;
+    margin-right: 10px;
+}
+
+.navlink ul, li, a:hover{
+    color: #fff; /*Can change the color later*/
+}
+
+/* Button for scroll back to top button*/
+
+#backtotop{
+    display: block;
+    position: fixed;
+    z-index: 99;
+    transform: translate(-25%, -25%);
+    padding: 15px 30px 15px 30px;
+    border-radius: 20px;
+    background-color: rgb(151, 65, 159);
+    color:#b1afaf;
+    transition: 1.2s;
+    font-size: 15px;
+    letter-spacing: 3px;
+    left: 1300px;
+    bottom: 0;
+    top: 740px;
+} 
+
+#backtotop:hover {
+    border-radius: 10px;
+}
+
+/* Home page */
+.home-container{
+    background-image: linear-gradient(rgba(87, 87, 44, 0.509),rgba(44, 40, 40, 0.429)),url(../image/background/inazuma7.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    margin-top: -20px;
+}
+
+.intro{
+    width: 75%;
+    height: 110px;
+    margin: 150px 100px 20px 100px;
+    padding: 20px 50px 20px 30px;
+    font-weight: bolder;
+    transition: 1.9s;
+}
+
+.intro:hover{
+    transform: scale(1.1);
+    transition: 1.9s;
+}
+
+.intro h1{
+    font-size: 63px;
+    letter-spacing: -1px;
+    color: rgb(190, 79, 200);
+}
+
+.intro p{
+    font-size: 15px;
+    color:#b1afaf;
+    letter-spacing: 3px;
+}
+
+.archon{
+    font-size: 15px;
+    color:#b1afaf;
+    letter-spacing: 3px;
+}
+
+.archon:hover{
+    color: rgb(190, 79, 200);
+}
+
+button{
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    padding: 15px 30px 15px 30px;
+    border-radius: 20px;
+    background-color: rgb(151, 65, 159);
+    color:#b1afaf;
+    transition: 1.2s;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+button:hover{
+    border-radius: 10px;
+}
+
+.raiden-home {
+    background-color: rgba(187, 72, 197, 0.753);
+    width: 530px;
+    height: 540px;
+    margin: 80px 140px 10px 10px;
+    border-radius: 172px 400px 74px 120px;
+}
+
+.raiden-home img{
+    position: absolute;
+    right: 45px;
+    top: 110px;
+    width: 850px;
+    height: 550px;
+    transition: 0.9s;
+}
+
+.raiden-home img:hover{
+    transform: scale(1.1);
+    transition: 1.9s;
+}
+
+/* About page */
+.about-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.509),rgba(44, 40, 40, 0.429)),url(../image/background/inazuma4.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.raiden-container{
+    width: 25%;
+    height: 97vh;
+    position: absolute;
+    top: 110%;
+    left: -10px;
+}
+
+.raiden-container img{
+    height: 97vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+}
+
+.info-raiden{
+    background-color: #0000002f;
+    width: 74%;
+    height: 89vh;
+    position: absolute;
+    right: 0;
+    top: 110%;
+    font-weight: bolder;
+    padding: 25px;
+    border-radius: 20px;
+    transition: 1.2s;
+}
+
+.info-raiden:hover{
+    background-color: #0000005e;
+    transition: 1.2s;
+}
+
+.info-raiden h1{
+    text-align: center;
+    font-size: 59px;
+    color: rgb(190, 79, 200);
+}
+
+.head ::before,
+.head ::after {
+    content: "";
+    display: block;
+    width: 720px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+}
+
+.head ::before {
+    left: 0;
+}
+
+.head ::after {
+    right: 0;
+}
+.info-raiden h4{
+    font-size: 43px;
+    color: rgb(190, 79, 200);
+}
+
+.info-raiden p{
+    font-size: 15px;
+    color:#fff;
+    letter-spacing: 3px;
+    margin-left: 20px;
+}
+
+.inside-bio{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.outside-bio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+    margin-top: 10px;
+}
+.bio p{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Ascensions Page*/
+.asc-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.726),rgba(44, 40, 40, 0.736)),url(../image/background/inazuma2.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    width: 100%;
+    height: 550vh;
+    padding-top: 2%;
+}
+
+.asc-inside{
+    width: 100%;
+    height: 95vh;
+    background-color: #0000002f;
+    color: #fff;
+}
+.acs-table{
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.acs-table-2{
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+
+td, th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tag{
+    color: #b06912;
+}
+
+.head-one {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.inside-acs-one{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px 0 0 70px;
+}
+
+.inside-acs-two{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px 30px 0 55px;
+}
+
+.inside-acs-three{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px 30px 40px 55px;
+}
+
+/* Mora format */
+.inside-one-mora{
+    background: linear-gradient(rgb(59, 73, 77),rgb(12, 126, 171));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.mora-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Vajrada Silver format*/
+.inside-one-silver{
+    background: linear-gradient(rgb(59, 73, 77),rgb(19, 176, 100));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.VajradaS-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Amakum Fruit format */
+.inside-one-amakum{
+    background: linear-gradient(rgb(59, 73, 77),rgb(120, 118, 118));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.amakum-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Old Handguard format */
+
+.inside-one-oldH{
+    background: linear-gradient(rgb(59, 73, 77),rgb(120, 118, 118));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.oldH-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Storm Beads*/
+.inside-one-Storm{
+    background: linear-gradient(rgb(116, 21, 127),rgb(179, 39, 214));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.Storm-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Vajrada Silver format*/
+.inside-two-fragment{
+    background: linear-gradient(rgb(59, 73, 77),rgb(18, 90, 197));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.fragment-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Kageuchi Handguard format */
+
+.kageuchi img{
+    width: 250px;
+    height: 255px;
+}
+.inside-one-kageuchi{
+    background: linear-gradient(rgb(59, 73, 77),rgb(19, 176, 100));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.kageuchi-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Vajrada chunk format*/
+
+.chunk-container img{
+    width: 250px;
+    height: 256px;
+}
+.inside-two-chunk{
+    background: linear-gradient(rgb(116, 21, 127),rgb(129, 27, 155));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.chunk-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Famed Handguard format */
+.inside-one-famed{
+    background: linear-gradient(rgb(59, 73, 77),rgb(23, 99, 204));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.famed-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+/* Vajrada Gemstone format */
+
+.gemstone-container img{
+    width: 250px;
+    height: 255px;
+}
+.inside-two-gemstone{
+    background: linear-gradient(rgb(152, 120, 6),rgb(176, 116, 19));
+    width: 260px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.gemstone-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Total Format */
+.total-storage{
+    padding-left: 40px;
+}
+
+.total-inside{
+    width: 100%;
+    height: 100vh;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+
+.text{
+    color: #dede19;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Total mora */
+.total-mora img{
+    width: 100%;
+    
+}
+
+.total-mora{
+    background: linear-gradient(rgb(59, 73, 77),rgb(12, 126, 171));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-mora-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Total Storm Breads */
+.total-Storm img{
+    width: 100%;
+    
+}
+
+.total-Storm{
+    background: linear-gradient(rgb(116, 21, 127),rgb(179, 39, 214));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-storm-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+/* Total vajrada Amethyst Silver Format total */
+.total-Vsilver img{
+    width: 100%;
+    
+}
+
+.total-Vsilver{
+    background: linear-gradient(rgb(59, 73, 77),rgb(19, 176, 100));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-Vsilver-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+/* Total vajrada Amethyst Fragment Format total */
+.total-fragment img{
+    width: 100%;
+    
+}
+
+.total-fragment{
+    background: linear-gradient(rgb(59, 73, 77),rgb(18, 90, 197));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-fragment-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Total vajrada Amethyst Chunk Format total */
+.total-chunk img{
+    width: 100%;
+    
+}
+
+.total-chunk{
+    background: linear-gradient(rgb(116, 21, 127),rgb(129, 27, 155));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-chunk-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Total vajrada Amethyst Gem Stone Format total */
+.total-gemstone img{
+    width: 100%;
+    
+}
+
+.total-gemstone{
+    background: linear-gradient(rgb(152, 120, 6),rgb(176, 116, 19));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-gemstone-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Amakumo Fruit Format Total */
+.total-fruit img{
+    width: 100%;
+    
+}
+
+.total-fruit{
+    background: linear-gradient(rgb(59, 73, 77),rgb(120, 118, 118));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-fruit-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Old Handguard Format Total */
+.total-old img{
+    width: 100%;
+    
+}
+
+.total-old{
+    background: linear-gradient(rgb(59, 73, 77),rgb(120, 118, 118));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-old-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Kageuchi Handguard Format Total */
+.total-kageuchi img{
+    width: 100%;
+    
+}
+
+.total-kageuchi{
+    background: linear-gradient(rgb(59, 73, 77),rgb(19, 176, 100));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-kageuchi-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Famed Handguard Format Total */
+.total-famed img{
+    width: 100%;
+    
+}
+
+.total-famed{
+    background: linear-gradient(rgb(59, 73, 77),rgb(23, 99, 204));
+    width: 240px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.total-famed-num{
+    border-radius: 0 0 15px 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    color: black;
+    text-align-last: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Talent Section */
+.inside-talent{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+h1{
+    color: #fff;
+}
+
+.talent-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+}
+.talent-table th {
+    background-color: #818181;
+    text-align: center;
+}
+
+.talent-table td{
+    color: #b06912;
+    text-align: center;
+}
+
+.origins img{
+    width: 50px;
+    height: 50px;
+}
+
